@@ -1,4 +1,0 @@
-Flask
-PyYAML
-adafruit-circuitpython-neopixel
-adafruit-circuitpython-servokit
