@@ -2,7 +2,7 @@
 
 :: Define variables
 set REMOTE_USER=angela
-set REMOTE_HOST=192.168.1.100
+set REMOTE_HOST=angela.local
 set REMOTE_PATH=/home/angela
 set LOCAL_PATH=angela
 set PASSWORD=maria

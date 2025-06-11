@@ -10,17 +10,17 @@ leds:
 
 servos:
   arm:
-    left_arm_index: 1
-    right_arm_index: 2
+    left_arm_index: 2
+    right_arm_index: 3
     angle_down_limit : 20
     angle_up_limit : 60
   head:
-    index: 3
+    index: 1
     angle_down_limit : 20
     angle_up_limit : 60
 
 motors:
-  left_forward_index: 13
-  left_backward_index: 12
-  right_forward_index: 14
-  right_backward_index: 15
+  left_forward_index: 9
+  left_backward_index: 10
+  right_forward_index: 11
+  right_backward_index: 12
