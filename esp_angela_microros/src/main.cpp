@@ -85,7 +85,7 @@ Serial.println("executor");
 }
 
 void loop() {
-  delay (100);
+  delay (50);
   ros_error::rcSoftCheck(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100)));
   rosMovementHandler.spin();
   // Handle OTA updates
