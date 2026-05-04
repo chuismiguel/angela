@@ -1,6 +1,11 @@
-angela_ws/build
-angela_ws/install
-angela_ws/log
+# compilation
+angela_ws/build/
+angela_ws/install/
+angela_ws/log/
 
-# local variable script
-build.sh
+# microros
+esp_microros/build
+esp_microros/sdk*
+
+# vscode
+.vscode/
