@@ -64,7 +64,7 @@ void RosMovementHandler::init(rcl_node_t* node, rclc_support_t* support, rcl_all
         &subscriber_,
         node,
         ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Twist),
-        "cmd_vel"
+        "/angela/cmd_vel"
     ));
 
     // Initialize executor for subscriber
@@ -74,9 +74,3 @@ void RosMovementHandler::init(rcl_node_t* node, rclc_support_t* support, rcl_all
     // begin movement
     movement_.begin();
 }
-
-void RosMovementHandler::spin()
-{
-    ros_error::rcCheck(rclc_executor_spin_some(&executor_, RCL_MS_TO_NS(100)));
-}
-
