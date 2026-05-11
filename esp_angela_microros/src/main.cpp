@@ -7,6 +7,7 @@
 
 #include <movement_handler.h>
 #include <joint_handler.h>
+#include <light_handler.h>
 
 // Project libraries
 // #include "ota.h"
@@ -24,8 +25,12 @@ rcl_timer_t timer;
 // ANGELA COMPONENTS
 RosMovementHandler rosMovementHandler;
 RosJointHandler rosJointHandler;
+RosLightHandler rosLightHandler;
 
 void setup() {
+  // begin global lights
+  globalLightInstance.begin();
+  
   // Configure serial transport
   Serial.begin(115200);
   set_microros_wifi_transports(WIFI_SSID, WIFI_PASSWORD, IPAddress(192, 168, 68, 54), 8888);
@@ -44,13 +49,16 @@ void setup() {
 
   rosMovementHandler.init(&node, &support, &allocator);
   rosJointHandler.init(&node, &support, &allocator);
+  rosLightHandler.init(&node, &support, &allocator);
   Serial.println("Setup complete");
+  globalLightInstance.showSuccess();
 }
 
 void loop() {
   delay (50);
   rosMovementHandler.spin();
   rosJointHandler.spin();
+  rosLightHandler.spin();
   // Handle OTA updates
 //   OtaHandler::Handle();
 }

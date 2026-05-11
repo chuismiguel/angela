@@ -12,4 +12,8 @@ namespace angela_pins
     constexpr int HEAD = 11;
     constexpr int LEFT_ARM = 12;
     constexpr int RIGHT_ARM = 13;
+
+    // lighting
+    constexpr int LIGHTS = 48;
+    constexpr int LIGHT_N = 4;
 }

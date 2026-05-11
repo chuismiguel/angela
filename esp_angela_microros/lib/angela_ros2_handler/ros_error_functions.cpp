@@ -1,25 +1,16 @@
 #include "ros_error_functions.h"
 
-#include <Arduino.h>
+// Define the global light instance
+Lights globalLightInstance(angela_pins::LIGHTS, angela_pins::LIGHT_N);
 
 namespace ros_error
 {
-
-void ErrorLoop()
-{
-    while (true)
-    {
-        // TODO: Add US Led Blinking
-        Serial.println("Entered error state");
-        delay(1000);
-    }
-}
 
 void rcCheck(rcl_ret_t Rc)
 {
     if (Rc != RCL_RET_OK)
     {
-        ErrorLoop();
+       globalLightInstance.showErrorLoop();
     }
 }
 
@@ -27,7 +18,7 @@ void rcSoftCheck(rcl_ret_t Rc)
 {
     if (Rc != RCL_RET_OK)
     {
-        // Do nothing (soft fail)
+        globalLightInstance.warnLight();
     }
 }
 }
