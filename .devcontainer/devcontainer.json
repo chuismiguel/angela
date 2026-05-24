@@ -1,0 +1,21 @@
+{
+  "name": "esp-idf",
+  "image": "espressif/idf:release-v5.4",
+
+  "workspaceFolder": "/workspace",
+
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+  ],
+
+  "runArgs": [
+    "--privileged"
+  ],
+
+  "containerEnv": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PYTHONIOENCODING": "utf-8"
+  },
+
+}

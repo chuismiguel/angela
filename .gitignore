@@ -1,11 +1,5 @@
-# compilation
-angela_ws/build/
-angela_ws/install/
-angela_ws/log/
-
-# microros
-esp_microros/build
-esp_microros/sdk*
-
-# vscode
-.vscode/
+sdkconfig
+sdkconfig.old
+dependencies.lock
+build/
+managed_components/
