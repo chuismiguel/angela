@@ -1,4 +1,4 @@
-menu "micro-ROS example-app settings"
+menu "Angela Microros config"
 
     config MICRO_ROS_APP_STACK
         int "Stack the micro-ROS app (Bytes)"
@@ -11,5 +11,56 @@ menu "micro-ROS example-app settings"
         default 5
         help
         Priority of micro-ros task higher value means higher priority
-        
+    
+      config LIGHT_PIN
+        int "Ultrasound / Neopixel GPIO pin"
+        default 48
+
+    config LIGHT_PIXEL_COUNT
+        int "Pixel Count"
+        default 2 
+
+    config US_SHARED_PIN
+        int "Ultrasound sensor shared pin"
+        default 47
+
+    config JOINT_STATE_TOPIC_NAME
+        string  "topic for head and arms joint state"
+        default "/angela/joint_state"
+
+    config ARM_JOINT_NAME
+        string  "Name of joint in joint_state msg containing arm position"
+        default "arms"
+
+    config HEAD_JOINT_NAME
+        string  "Name of joint in joint_state msg containing head position"
+        default "head"
+
+    config LEFT_ARM_SERVO_PIN
+        int "Servo pin for robot's left arm"
+        default 27
+    config RIGHT_ARM_SERVO_PIN
+        int "Servo pin for robot's right arm"
+        default 32
+    config HEAD_SERVO_PIN
+        int "Servo pin for robot's head"
+        default 33
+
+    config MOVEMENT_TOPIC_NAME
+        string  "topic for cmd vel movement"
+        default "/angela/cmd_vel"
+
+    config MOT1_FWD_PIN
+        int "Motor 1 forward pin"
+        default 50
+    config MOT1_BWD_PIN
+        int "Motor 1 backward pin"
+        default 49
+    config MOT2_FWD_PIN
+        int "Motor 2 forward pin"
+        default 5
+    config MOT2_BWD_PIN
+        int "Motor 2 backward pin"
+        default 4
+
 endmenu

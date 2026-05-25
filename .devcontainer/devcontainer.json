@@ -18,4 +18,5 @@
     "PYTHONIOENCODING": "utf-8"
   },
 
+  "postCreateCommand": "echo 'source /opt/esp/idf/export.sh && pip3 install catkin_pkg colcon-common-extensions lark \"empy<4\"' >> ~/.bashrc"
 }

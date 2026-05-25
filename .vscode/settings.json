@@ -1,0 +1,5 @@
+{
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/angela_microros/build/compile_commands.json",
+  "clangd.arguments": ["--compile-commands-dir=angela_microros/build"],
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}
